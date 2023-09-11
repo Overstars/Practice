@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1560437644 source:c:\users\dell\desktop\c++\oj\hdoj2056\main.cpp
+	<cstdio>
+	<iostream>
+	<cmath>
+	<algorithm>
+	<iomanip>
+

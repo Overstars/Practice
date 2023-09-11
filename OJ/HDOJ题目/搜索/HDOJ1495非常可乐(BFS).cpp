@@ -1,0 +1,136 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<queue>
+using namespace std;
+typedef struct Node
+{
+	int x,y,z,step;
+} node;
+int vis[105][105],n,m,s,mini;
+void bfs(void)
+{
+	queue<node>QAQ;
+	node start;
+	start.x=0,start.y=0,start.z=s,start.step=0;
+    QAQ.push(start);
+    while(!QAQ.empty()){
+		node now=QAQ.front();
+		QAQ.pop();
+        if(now.x==0&&now.y==now.z||now.y==0&&now.x==now.z){
+			mini=now.step;
+			return;
+        }//互相倒水,不满就倒
+        node nex=now;
+		if(now.y<m){//x->y
+			nex=now;
+			nex.y+=nex.x;
+			if(nex.y>m){
+				nex.x=nex.y-m;
+				nex.y=m;
+			}
+			else{
+				nex.x=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+		if(now.z<s){//x->z
+			nex=now;
+			nex.z+=nex.x;
+			if(nex.z>s){
+				nex.x=nex.z-s;
+				nex.z=s;
+			}
+			else{
+				nex.x=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+        if(now.x<n){//y->x
+        	nex=now;
+			nex.x+=nex.y;
+			if(nex.x>n){
+				nex.y=nex.x-n;
+				nex.x=n;
+			}
+			else{
+				nex.y=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+        if(now.z<s){//y->z
+        	nex=now;
+			nex.z+=nex.y;
+			if(nex.z>s){
+				nex.y=nex.z-s;
+				nex.z=s;
+			}
+			else{
+				nex.y=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+        if(now.x<n){//z->x
+        	nex=now;
+			nex.x+=nex.z;
+			if(nex.x>n){
+				nex.z=nex.x-n;
+				nex.x=n;
+			}
+			else{
+				nex.z=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+        if(now.y<m){//z->y
+        	nex=now;
+			nex.y+=nex.z;
+			if(nex.y>m){
+				nex.z=nex.y-m;
+				nex.y=m;
+			}
+			else{
+				nex.z=0;
+			}
+			nex.step++;
+			if(!vis[nex.x][nex.y]){
+				vis[nex.x][nex.y]=1;
+				QAQ.push(nex);
+			}
+        }
+    }
+    return;
+}
+int main()
+{
+	while(cin>>s>>n>>m&&n&&m&&s){
+		mini=0;
+		memset(vis,0,sizeof(vis));
+		bfs();
+		if(mini)
+			cout<<mini<<endl;
+		else
+			cout<<"NO"<<endl;
+	}
+	return 0;
+}
