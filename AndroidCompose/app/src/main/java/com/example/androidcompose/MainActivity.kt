@@ -18,6 +18,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.androidcompose.components.*
 import com.example.androidcompose.ui.theme.AndroidComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +28,12 @@ class MainActivity : ComponentActivity() {
             AndroidComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+
+                    StateSamplePreview()
+                //                    ButtonSamplePreview()
+//                    IconSamplePreview()
+                //                    ModifierSamplePreview()
+                //                    Greeting("Android")
                 }
             }
         }
@@ -94,6 +100,8 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     AndroidComposeTheme {
+//        ModifierSamplePreview()
+//        ButtonSamplePreview()
         Greeting("Android")
     }
 }
