@@ -27,9 +27,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidComposeTheme {
                 // A surface container using the 'background' color from the theme
+
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
 
-                    StateSamplePreview()
+                    SliderSamplePreview()
+//                    ProgressIndicatorSamplePreview()
+//                    TextFieldSamplePreview()
+//                    SwitchSamplePreview()
+//                    StateSamplePreview()
                 //                    ButtonSamplePreview()
 //                    IconSamplePreview()
                 //                    ModifierSamplePreview()
