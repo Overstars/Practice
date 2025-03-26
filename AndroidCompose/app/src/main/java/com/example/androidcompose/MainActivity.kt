@@ -19,6 +19,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androidcompose.components.*
+import com.example.androidcompose.layout.ColumnSamplePreview
+import com.example.androidcompose.layout.RadioButtonSamplePreview
 import com.example.androidcompose.ui.theme.AndroidComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,7 +32,9 @@ class MainActivity : ComponentActivity() {
 
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
 
-                    SliderSamplePreview()
+                    RadioButtonSamplePreview()
+//                    ColumnSamplePreview()
+//                    SliderSamplePreview()
 //                    ProgressIndicatorSamplePreview()
 //                    TextFieldSamplePreview()
 //                    SwitchSamplePreview()
