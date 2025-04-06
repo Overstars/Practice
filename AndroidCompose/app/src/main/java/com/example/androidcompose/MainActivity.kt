@@ -32,7 +32,12 @@ class MainActivity : ComponentActivity() {
 
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
 
-                    ConstrainLayoutSamplePreview()
+                    NavSamplePreview()
+//                    DialogSamplePreview()
+//                    ScaffoldSamplePreview()
+//                    DropdownMenuSamplePreview()
+//                    TabSamplePreview()
+//                    ConstrainLayoutSamplePreview()
 //                    LazyColumnsSamplePreview()
 //                    RadioButtonSamplePreview()
 //                    ColumnSamplePreview()
