@@ -32,7 +32,11 @@ class MainActivity : ComponentActivity() {
 
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
 
-                    NavSamplePreview()
+                    PermissionSamplePreview()
+//                    AnimationSamplePreview()
+//                    CompositionLocalSamplePreview()
+//                    LifecycleSamplePreview()
+//                    NavSamplePreview()
 //                    DialogSamplePreview()
 //                    ScaffoldSamplePreview()
 //                    DropdownMenuSamplePreview()
