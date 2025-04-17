@@ -1,0 +1,25 @@
+package com.overstars.myapplication.ui.screens
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.overstars.myapplication.ui.components.TopAppBar
+
+@Composable
+fun MineScreen(statusBarHeight: Int) {
+    Text(text = "我的页面.")
+    Column (modifier = Modifier) {
+        TopAppBar (statusBarHeight) {
+            Text(text = "我的页面.")
+        }
+        Text(text = "我的页面内容.")
+    }
+}
+
+@Preview
+@Composable
+fun MineScreenPreview() {
+    MineScreen(20)
+}

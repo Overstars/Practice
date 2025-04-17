@@ -13,7 +13,7 @@ import com.overstars.myapplication.model.entity.NavigationItem
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MainFrame() {
+fun MainFrame(statusBarHeight: Int) {
 
     val navigationItems = listOf(
         NavigationItem(
@@ -60,12 +60,17 @@ fun MainFrame() {
             }
         }
     }) {
-        Text(text = "current navigation item $currentNavigationIndex!")
+//        Text(text = "current navigation item $currentNavigationIndex!")
+        when (currentNavigationIndex) {
+            0 -> StudyScreen(statusBarHeight)
+            1 -> TaskScreen()
+            2 -> MineScreen(statusBarHeight)
+        }
     }
 }
 
 @Preview
 @Composable
 fun MainFramePreview() {
-    MainFrame()
+    MainFrame(30)
 }
