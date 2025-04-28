@@ -1,0 +1,15 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "electron测试程序",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Overstars",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.2.1"
+  }
+}
