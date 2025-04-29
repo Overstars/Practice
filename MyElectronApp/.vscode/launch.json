@@ -13,7 +13,12 @@
         "port": 9222,
         "request": "attach",
         "type": "chrome",
-        "webRoot": "${workspaceFolder}"
+        "webRoot": "${workspaceFolder}",
+        // 新增路径映射（根据实际项目结构调整）
+        // "pathMapping": {
+        //   "/_/src/": "${workspaceFolder}/src/",
+        //   "/": "${workspaceFolder}"
+        // }
       },
       {
         "name": "Main",
@@ -24,7 +29,7 @@
         "windows": {
           "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
         },
-        "args": [".", "--remote-debugging-port=9222"],
+        "args": ["./src/main.js", "--remote-debugging-port=9222"],
         "outputCapture": "std",
         "console": "integratedTerminal"
       }
