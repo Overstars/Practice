@@ -37,22 +37,3 @@ npx electron-forge import
 npm run make
 ```
 
-# 尝试开发一个NoSQL连接客户端
-
-```
-+-----------------------+
-| Electron Renderer     |  React UI
-+-----------------------+
-         ↓ IPC
-+-----------------------+
-| Electron Main Process |  Node.js 主逻辑
-+-----------------------+
-         ↓ Native API
-+-----------------------+
-| C++ Native Addon      |  LevelDB/RocksDB 操作
-+-----------------------+
-         ↓ TCP
-+-----------------------+
-| Redis Server          |  远程/本地 Redis 服务
-+-----------------------+
-```
